@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button, TextField } from '@material-ui/core';
 import { login, register } from '../Service';
 import { useLocalStorage } from '../hooks/useLocalStorage';
@@ -13,20 +14,20 @@ function Login() {
     try {
       await login(username, password);
       setLoggedIn(true);
-      // Tratar o sucesso do login, como redirecionar para a página principal
+      
     } catch (error: any) {
       console.error('Erro ao fazer login:', (error as Error).message);
-      // Tratar o erro, como exibir uma mensagem de erro na tela
+ 
     }
   };
 
   const handleRegister = async () => {
     try {
       await register(username, password);
-      // Tratar o sucesso do cadastro, como redirecionar para a página de login
+    
     } catch (error: any) {
       console.error('Erro ao fazer o cadastro:', (error as Error).message);
-      // Tratar o erro, como exibir uma mensagem de erro na tela
+    
     }
   };
 
@@ -60,6 +61,9 @@ function Login() {
       >
         Cadastrar
       </Button>
+      {loggedIn && (
+        <Link to="/Home">Redirecionar para a página principal</Link>
+      )}
     </div>
   );
 }
