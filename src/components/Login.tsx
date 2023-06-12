@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@material-ui/core';
-import { login, register } from '../api';
+import { login, register } from '../Service';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
