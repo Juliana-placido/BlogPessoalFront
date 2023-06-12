@@ -55,7 +55,7 @@ export async function updateTema(id: number, tema: Tema) {
 export async function deleteTema(id: number) {
   // implementação do método DELETE para excluir um tema
   try {
-    await axios.delete(`${API_BASE_URL}/temas/${id}`);
+    await api.delete(`${API_BASE_URL}/temas/${id}`);
   } catch (error) {
     throw new Error('Erro ao excluir o tema');
   }
