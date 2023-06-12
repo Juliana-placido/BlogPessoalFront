@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPostagens, deletePostagem } from '../Service';
 import 'react-notifications/lib/notifications.css';
-import { NotificationContainer, NotificationManager } from 'react-notification';
+import { toast } from 'react-toastify';
 
 
 interface Postagem {
@@ -32,7 +32,7 @@ function ListaPostagem() {
       await deletePostagem(id);
       // Remover a postagem da lista após excluí-la
       setPostagens(postagens.filter(postagem => postagem.id !== id));
-      NotificationManager.success('Postagem excluída com sucesso', 'Sucesso');
+      toast.success('Postagem excluída com sucesso');
     } catch (error) {
       console.error('Erro ao excluir a postagem:', error);
     }
