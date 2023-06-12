@@ -5,15 +5,21 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-const App: React.FC = () => {
+function Routes() {
+  return (
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/login" component={Login} />
+    </Switch>
+  );
+}
+
+function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-        </Switch>
+        <Routes />
         <Footer />
       </div>
     </Router>
@@ -21,3 +27,4 @@ const App: React.FC = () => {
 }
 
 export default App;
+
