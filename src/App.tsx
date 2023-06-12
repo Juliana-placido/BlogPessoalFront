@@ -4,6 +4,18 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store.ts';
+
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
 
 function Routes() {
   return (
