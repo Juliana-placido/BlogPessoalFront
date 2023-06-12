@@ -1,6 +1,4 @@
-// src/api.ts
-
-const API_BASE_URL = 'http://localhost:8080'; 
+const API_BASE_URL = 'http://localhost:8080/'; 
 
 export async function login(username: string, password: string) {
   const response = await fetch(`${API_BASE_URL}/login`, {
