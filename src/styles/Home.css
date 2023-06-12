@@ -1,0 +1,32 @@
+
+.home-container {
+    text-align: center;
+    margin: 20px;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  /* Estilos com tema de Harry Potter */
+  .home-container {
+    background-color: #5D5349;
+    border: 1px solid #9E7E57;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #D3A625;
+  }
+  
+  p {
+    color: #C1A575;
+  }
+  
