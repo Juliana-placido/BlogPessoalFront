@@ -1,7 +1,6 @@
-import React from 'react';
 import '../styles/Home.css';
 
-const Home: React.FC = () => {
+function Home() {
   return (
     <div className="home-container">
       <h1>Bem-vindo ao Blog Pessoal</h1>

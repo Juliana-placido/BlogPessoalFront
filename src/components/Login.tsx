@@ -1,13 +1,16 @@
-import React from 'react';
+import { Button } from '@material-ui/core';
 import '../styles/Login.css';
 
-const Login: React.FC = () => {
+function Login() {
   return (
     <div className="login-container">
       <h2>Fazer login</h2>
-      {}
+      <Button variant="contained" color="primary">
+        Login
+      </Button>
     </div>
   );
 }
 
 export default Login;
+

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "react": "^17",
     "react-dom": "^17",
     "react-router-dom": "^5.2.0"
