@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getPostagens, deletePostagem } from '../Service';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer, NotificationManager } from 'react-notification';
+
 
 interface Postagem {
   id: number;
@@ -29,6 +32,7 @@ function ListaPostagem() {
       await deletePostagem(id);
       // Remover a postagem da lista após excluí-la
       setPostagens(postagens.filter(postagem => postagem.id !== id));
+      NotificationManager.success('Postagem excluída com sucesso', 'Sucesso');
     } catch (error) {
       console.error('Erro ao excluir a postagem:', error);
     }
