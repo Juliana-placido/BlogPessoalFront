@@ -3,7 +3,7 @@ import { Typography, Link } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import '../styles/Footer.css';
 
-function Footer() {
+function FooterComponent() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   return (
@@ -18,4 +18,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterComponent;

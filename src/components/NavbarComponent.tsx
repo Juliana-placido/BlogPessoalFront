@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { login, logout } from '../redux/authActions';
 import '../styles/Navbar.css';
 
-function Navbar() {
+function NavbarComponent() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
 
@@ -34,4 +34,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarComponent;
