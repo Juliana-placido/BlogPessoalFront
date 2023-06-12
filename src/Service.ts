@@ -7,7 +7,7 @@ interface Postagem {
 }
 
 export interface Tema {
-  id?: number;
+  id: number | undefined;
   nome: string;
   descricao: string;
 }
@@ -55,7 +55,7 @@ export async function updateTema(id: number, tema: Tema) {
 export async function deleteTema(id: number) {
   // implementação do método DELETE para excluir um tema
   try {
-    await api.delete(`${API_BASE_URL}/temas/${id}`);
+    await axios.delete(`${API_BASE_URL}/temas/${id}`);
   } catch (error) {
     throw new Error('Erro ao excluir o tema');
   }
