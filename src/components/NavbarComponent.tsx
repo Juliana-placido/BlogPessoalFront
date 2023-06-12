@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, logout } from '../redux/authActions';
+import { NotificationManager } from 'react-notifications';
 import '../styles/Navbar.css';
 
 function NavbarComponent() {
@@ -11,11 +12,15 @@ function NavbarComponent() {
   const handleLogin = () => {
     // Dispatch da ação de login
     dispatch(login(username, password)); // Substitua `username` e `password` pelos valores adequados
+    // Exibir um alerta de sucesso
+    NotificationManager.success('Login realizado com sucesso', 'Sucesso');
   };
 
   const handleLogout = () => {
     // Dispatch da ação de logout
     dispatch(logout());
+    // Exibir um alerta de sucesso
+    NotificationManager.success('Logout realizado com sucesso', 'Sucesso');
   };
 
   return (
